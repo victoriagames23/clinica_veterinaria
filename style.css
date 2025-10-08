@@ -1,0 +1,210 @@
+/* Importação de Fonte Google Fonts (Opcional, mas recomendado) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --cor-principal: #008080; /* Teal/Verde-azulado - Remete a saúde e calma */
+    --cor-secundaria: #f4f4f4;
+    --cor-texto: #333;
+    --cor-acao: #FFD700; /* Amarelo Ouro - Para botões de destaque */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Cabeçalho --- */
+header {
+    background: var(--cor-principal);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-weight: 600;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Seções Padrão --- */
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(odd) {
+    background-color: var(--cor-secundaria);
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--cor-principal);
+}
+
+/* --- Hero (Destaque Principal) --- */
+.hero {
+    background: linear-gradient(rgba(0, 128, 128, 0.8), rgba(0, 128, 128, 0.8)), url('https://via.placeholder.com/1200x400/008080/FFFFFF?text=FOTO+DE+PETS') no-repeat center center/cover; /* Usando placeholder como exemplo de imagem */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--cor-acao);
+    color: var(--cor-principal);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #FFC700;
+}
+
+/* --- Serviços --- */
+.servicos .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.servico-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 30%;
+    min-width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+}
+
+.servico-card h4 {
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.btn-detalhe {
+    background: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-detalhe:hover {
+    background-color: #006666;
+}
+
+.detalhe {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    display: none; /* Escondido por padrão */
+}
+
+.detalhe p {
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+}
+
+
+/* --- Contato --- */
+.contato p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* --- Rodapé --- */
+footer {
+    background: var(--cor-texto);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+/* --- Media Queries (Responsividade Básica) --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+
+    .servicos .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servico-card {
+        width: 90%;
+    }
+}
